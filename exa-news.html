@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Indonesia — Grid Responsif</title>
+    <link rel="stylesheet" href="news.css">
+</head>
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="/" class="logo" aria-label="News Indonesia - Beranda">
+                <span class="logo-mark">NI</span>
+                <span class="logo-text">News Indonesia</span>
+            </a>
+            <nav aria-label="Navigasi utama">
+                <ul class="nav-list">
+                    <li><a href="#" class="nav-link active">Terkini</a></li>
+                    <li><a href="#" class="nav-link">Politik</a></li>
+                    <li><a href="#" class="nav-link">Ekonomi</a></li>
+                    <li><a href="#" class="nav-link">Teknologi</a></li>
+                    <li><a href="#" class="nav-link">Olahraga</a></li>
+                </ul>
+            </nav>
+            <button class="btn-subscribe">Langganan</button>
+        </div>
+    </header>
+
+    <!-- ========== MAIN LAYOUT ========== -->
+    <div class="page-layout">
+
+        <!-- ===== MAIN CONTENT ===== -->
+        <main>
+
+            <!-- HERO SECTION — artikel utama besar -->
+            <section class="hero-section" aria-label="Berita utama">
+                <div class="hero-grid">
+
+                    <!-- Artikel headline — span 2 kolom -->
+                    <article class="article-card article-featured" aria-label="Berita utama">
+                        <div class="card-img-wrap">
+                            <div class="card-img placeholder-img placeholder-1"></div>
+                            <span class="card-category">Ekonomi</span>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title card-title--lg">
+                                <a href="#">Rupiah Menguat ke Level 15.200 Per Dolar AS Seiring Meredanya Ketegangan Global</a>
+                            </h1>
+                            <p class="card-excerpt">Bank Indonesia mencatat penguatan signifikan nilai tukar rupiah dipicu oleh sentimen positif pasar global dan kebijakan moneter yang akomodatif.</p>
+                            <div class="card-meta">
+                                <time datetime="2026-05-20">20 Mei 2026</time>
+                                <span class="meta-sep">·</span>
+                                <span>5 menit baca</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Artikel sekunder — 2 artikel kecil di kanan -->
+                    <article class="article-card article-secondary">
+                        <div class="card-img-wrap card-img-wrap--sm">
+                            <div class="card-img placeholder-img placeholder-2"></div>
+                            <span class="card-category">Politik</span>
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title card-title--md">
+                                <a href="#">Sidang Kabinet Bahas Anggaran Infrastruktur 2027</a>
+                            </h2>
+                            <div class="card-meta">
+                                <time datetime="2026-05-20">20 Mei 2026</time>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card article-secondary">
+                        <div class="card-img-wrap card-img-wrap--sm">
+                            <div class="card-img placeholder-img placeholder-3"></div>
+                            <span class="card-category">Teknologi</span>
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title card-title--md">
+                                <a href="#">Startup Fintech Lokal Raih Pendanaan Seri B Senilai 50 Juta Dolar</a>
+                            </h2>
+                            <div class="card-meta">
+                                <time datetime="2026-05-20">20 Mei 2026</time>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- DIVIDER -->
+            <div class="section-divider">
+                <span>Berita Terkini</span>
+            </div>
+
+            <!-- ARTICLE GRID — card grid utama -->
+            <section aria-label="Berita terkini">
+                <div class="article-grid">
+
+                    <article class="article-card">
+                        <div class="card-img-wrap">
+                            <div class="card-img placeholder-img placeholder-4"></div>
+                            <span class="card-category">Olahraga</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title card-title--sm">
+                                <a href="#">Timnas Indonesia Lolos ke Final Piala AFF 2026 Usai Kalahkan Thailand</a>
+                            </h3>
+                            <p class="card-excerpt card-excerpt--sm">Pertandingan dramatis berakhir dengan skor 2-1 di menit akhir babak perpanjangan waktu.</p>
+                            <div class="card-meta">
+                                <time datetime="2026-05-19">19 Mei 2026</time>
+                                <span class="meta-sep">·</span>
+                                <span>3 menit baca</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="card-img-wrap">
+                            <div class="card-img placeholder-img placeholder-5"></div>
+                            <span class="card-category">Kesehatan</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title card-title--sm">
+                                <a href="#">Kemenkes Luncurkan Program Vaksinasi Nasional Untuk Remaja</a>
+                            </h3>
+                            <p class="card-excerpt card-excerpt--sm">Program ini menyasar 15 juta remaja usia 12-17 tahun di seluruh Indonesia mulai bulan Juni.</p>
+                            <div class="card-meta">
+                                <time datetime="2026-05-19">19 Mei 2026</time>
+                                <span class="meta-sep">·</span>
+                                <span>4 menit baca</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="card-img-wrap">
+                            <div class="card-img placeholder-img placeholder-6"></div>
+                            <span class="card-category">Lingkungan</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title card-title--sm">
+                                <a href="#">Kebakaran Hutan di Kalimantan Selatan Berhasil Dipadamkan</a>
+                            </h3>
+                            <p class="card-excerpt card-excerpt--sm">Tim gabungan BNPB dan BPBD berhasil memadamkan api yang membakar lebih dari 200 hektare lahan.</p>
+                            <div class="card-meta">
+                                <time datetime="2026-05-18">18 Mei 2026</time>
+                                <span class="meta-sep">·</span>
+                                <span>6 menit baca</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="card-img-wrap">
+                            <div class="card-img placeholder-img placeholder-1"></div>
+                            <span class="card-category">Pendidikan</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title card-title--sm">
+                                <a href="#">Kemendikbud Umumkan Perubahan Sistem PPDB 2026</a>
+                            </h3>
+                            <p class="card-excerpt card-excerpt--sm">Sistem baru mengutamakan zonasi berbasis jarak rumah ke sekolah secara presisi menggunakan GPS.</p>
+                            <div class="card-meta">
+                                <time datetime="2026-05-18">18 Mei 2026</time>
+                                <span class="meta-sep">·</span>
+                                <span>5 menit baca</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="card-img-wrap">
+                            <div class="card-img placeholder-img placeholder-2"></div>
+                            <span class="card-category">Budaya</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title card-title--sm">
+                                <a href="#">Batik Nusantara Masuk Nominasi Warisan Budaya UNESCO 2026</a>
+                            </h3>
+                            <p class="card-excerpt card-excerpt--sm">Indonesia mengajukan tiga jenis batik dari Jawa, Madura, dan Papua untuk mendapat pengakuan internasional.</p>
+                            <div class="card-meta">
+                                <time datetime="2026-05-17">17 Mei 2026</time>
+                                <span class="meta-sep">·</span>
+                                <span>4 menit baca</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="card-img-wrap">
+                            <div class="card-img placeholder-img placeholder-3"></div>
+                            <span class="card-category">Hukum</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title card-title--sm">
+                                <a href="#">MA Putuskan Vonis 15 Tahun Untuk Terdakwa Kasus Korupsi Dana Desa</a>
+                            </h3>
+                            <p class="card-excerpt card-excerpt--sm">Majelis hakim memperberat hukuman dari putusan pengadilan tingkat pertama yang hanya 8 tahun.</p>
+                            <div class="card-meta">
+                                <time datetime="2026-05-17">17 Mei 2026</time>
+                                <span class="meta-sep">·</span>
+                                <span>7 menit baca</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+        </main>
+
+        <!-- ===== SIDEBAR ===== -->
+        <aside aria-label="Sidebar">
+
+            <!-- Widget: Trending -->
+            <div class="widget">
+                <h2 class="widget-title">Trending</h2>
+                <ol class="trending-list">
+                    <li class="trending-item">
+                        <span class="trending-num">01</span>
+                        <div>
+                            <a href="#" class="trending-link">Harga BBM Naik Mulai 1 Juni 2026, Ini Rinciannya</a>
+                            <div class="card-meta">
+                                <time datetime="2026-05-20">20 Mei 2026</time>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="trending-item">
+                        <span class="trending-num">02</span>
+                        <div>
+                            <a href="#" class="trending-link">MRT Jakarta Perpanjang Rute Hingga Depok</a>
+                            <div class="card-meta">
+                                <time datetime="2026-05-19">19 Mei 2026</time>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="trending-item">
+                        <span class="trending-num">03</span>
+                        <div>
+                            <a href="#" class="trending-link">Gempa 5,8 SR Guncang Sulawesi Tengah</a>
+                            <div class="card-meta">
+                                <time datetime="2026-05-19">19 Mei 2026</time>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="trending-item">
+                        <span class="trending-num">04</span>
+                        <div>
+                            <a href="#" class="trending-link">Pemerintah Tetapkan UMP 2027 Naik 8 Persen</a>
+                            <div class="card-meta">
+                                <time datetime="2026-05-18">18 Mei 2026</time>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="trending-item">
+                        <span class="trending-num">05</span>
+                        <div>
+                            <a href="#" class="trending-link">KPU Umumkan Jadwal Pemilu Sela 2027</a>
+                            <div class="card-meta">
+                                <time datetime="2026-05-18">18 Mei 2026</time>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+
+            <!-- Widget: Kategori -->
+            <div class="widget">
+                <h2 class="widget-title">Kategori</h2>
+                <div class="category-grid">
+                    <a href="#" class="category-pill">Politik</a>
+                    <a href="#" class="category-pill">Ekonomi</a>
+                    <a href="#" class="category-pill">Teknologi</a>
+                    <a href="#" class="category-pill">Olahraga</a>
+                    <a href="#" class="category-pill">Kesehatan</a>
+                    <a href="#" class="category-pill">Budaya</a>
+                    <a href="#" class="category-pill">Lingkungan</a>
+                    <a href="#" class="category-pill">Hukum</a>
+                    <a href="#" class="category-pill">Pendidikan</a>
+                    <a href="#" class="category-pill">Internasional</a>
+                </div>
+            </div>
+
+            <!-- Widget: Newsletter -->
+            <div class="widget widget--accent">
+                <h2 class="widget-title">Newsletter</h2>
+                <p class="widget-desc">Dapatkan rangkuman berita terpenting setiap pagi langsung di inbox kamu.</p>
+                <div class="newsletter-form">
+                    <label for="email-input" class="sr-only">Alamat email</label>
+                    <input
+                        type="email"
+                        id="email-input"
+                        class="newsletter-input"
+                        placeholder="email@contoh.com"
+                        autocomplete="email"
+                    >
+                    <button type="button" class="newsletter-btn">Daftar</button>
+                </div>
+            </div>
+
+        </aside>
+
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a href="/" class="logo" aria-label="News Indonesia - Beranda">
+                    <span class="logo-mark">NI</span>
+                    <span class="logo-text">News Indonesia</span>
+                </a>
+                <p class="footer-tagline">Berita terpercaya, terkini, dan berimbang untuk Indonesia.</p>
+            </div>
+            <div class="footer-links-grid">
+                <div>
+                    <h3 class="footer-heading">Kanal</h3>
+                    <ul class="footer-list">
+                        <li><a href="#">Politik</a></li>
+                        <li><a href="#">Ekonomi</a></li>
+                        <li><a href="#">Teknologi</a></li>
+                        <li><a href="#">Olahraga</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-heading">Perusahaan</h3>
+                    <ul class="footer-list">
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="#">Redaksi</a></li>
+                        <li><a href="#">Karir</a></li>
+                        <li><a href="#">Iklan</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-heading">Bantuan</h3>
+                    <ul class="footer-list">
+                        <li><a href="#">Kontak</a></li>
+                        <li><a href="#">Pedoman Media</a></li>
+                        <li><a href="#">Kebijakan Privasi</a></li>
+                        <li><a href="#">Syarat & Ketentuan</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <small>&copy; 2026 News Indonesia. Semua hak dilindungi undang-undang.</small>
+            <nav aria-label="Navigasi footer">
+                <ul class="footer-bottom-nav">
+                    <li><a href="#">Kebijakan Privasi</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+</html>

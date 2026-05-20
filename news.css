@@ -1,0 +1,749 @@
+/* ============================================================
+   NEWS INDONESIA — Production Grid Layout
+   Struktur:
+   1. Reset & Variables
+   2. Typography & Base
+   3. Utilities
+   4. Header
+   5. Page Layout (CSS Grid utama)
+   6. Hero Section
+   7. Article Grid
+   8. Article Card Component
+   9. Sidebar & Widgets
+   10. Footer
+   11. Responsive (Media Queries)
+   ============================================================ */
+
+
+/* ============================================================
+   1. RESET & VARIABLES
+   ============================================================ */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Warna */
+    --color-primary:    #0f172a;
+    --color-secondary:  #334155;
+    --color-muted:      #64748b;
+    --color-border:     #e2e8f0;
+    --color-bg:         #f8fafc;
+    --color-surface:    #ffffff;
+    --color-accent:     #dc2626;
+    --color-accent-bg:  #fef2f2;
+
+    /* Tipografi */
+    --font-heading: 'Georgia', 'Times New Roman', serif;
+    --font-body:    'Arial', Helvetica, sans-serif;
+
+    /* Spacing */
+    --space-xs:  0.5rem;
+    --space-sm:  0.75rem;
+    --space-md:  1rem;
+    --space-lg:  1.5rem;
+    --space-xl:  2rem;
+    --space-2xl: 3rem;
+
+    /* Border */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --border:    1px solid var(--color-border);
+
+    /* Layout */
+    --max-width:      1200px;
+    --sidebar-width:  300px;
+    --header-height:  64px;
+}
+
+
+/* ============================================================
+   2. TYPOGRAPHY & BASE
+   ============================================================ */
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-accent);
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+/* Screen reader only — untuk aksesibilitas */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+
+/* ============================================================
+   3. UTILITIES
+   ============================================================ */
+.section-divider {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin: var(--space-xl) 0 var(--space-lg);
+}
+
+.section-divider::before,
+.section-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--color-border);
+}
+
+.section-divider span {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    white-space: nowrap;
+}
+
+/* Placeholder gambar — di production diganti <img> */
+.placeholder-img {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-sm);
+}
+
+.placeholder-1 { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+.placeholder-2 { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+.placeholder-3 { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+.placeholder-4 { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+.placeholder-5 { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+.placeholder-6 { background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%); }
+
+
+/* ============================================================
+   4. HEADER
+   ============================================================ */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--color-surface);
+    border-bottom: var(--border);
+    height: var(--header-height);
+}
+
+.header-inner {
+    /* Grid 3 kolom: logo | nav | tombol */
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: var(--space-xl);
+
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--space-xl);
+    height: 100%;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    white-space: nowrap;
+}
+
+.logo-mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: var(--color-accent);
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    flex-shrink: 0;
+}
+
+/* Navigasi header */
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    justify-content: center;
+}
+
+.nav-link {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-secondary);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-sm);
+    transition: color 0.15s, background 0.15s;
+    white-space: nowrap;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--color-accent);
+    background: var(--color-accent-bg);
+}
+
+/* Tombol subscribe */
+.btn-subscribe {
+    padding: var(--space-xs) var(--space-md);
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.15s;
+}
+
+.btn-subscribe:hover {
+    background: var(--color-accent);
+}
+
+
+/* ============================================================
+   5. PAGE LAYOUT — CSS Grid Utama
+   ============================================================ */
+
+/*
+   Layout 2 kolom:
+   - main    → mengisi sisa ruang
+   - sidebar → lebar tetap 300px
+*/
+.page-layout {
+    display: grid;
+    grid-template-columns: 1fr var(--sidebar-width);
+    gap: var(--space-2xl);
+    align-items: start;
+
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--space-xl) var(--space-xl);
+}
+
+main {
+    min-width: 0; /* cegah konten panjang bikin main overflow */
+}
+
+
+/* ============================================================
+   6. HERO SECTION
+   ============================================================ */
+.hero-section {
+    margin-bottom: var(--space-xl);
+}
+
+/*
+   Hero Grid — 3 kolom:
+   - artikel featured → span 2 kolom
+   - 2 artikel sekunder → masing-masing 1 kolom, susun vertikal
+*/
+.hero-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+    gap: var(--space-md);
+}
+
+.article-featured {
+    grid-row: 1 / 3; /* span 2 baris — artikel besar di kiri */
+}
+
+.article-secondary {
+    /* otomatis mengisi sisa slot di kanan */
+}
+
+
+/* ============================================================
+   7. ARTICLE GRID — Card Grid Responsif
+   ============================================================ */
+
+/*
+   auto-fit + minmax = responsif tanpa media query:
+   - Desktop: 3 kolom (280px masing-masing)
+   - Tablet:  2 kolom
+   - Mobile:  1 kolom
+*/
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
+}
+
+
+/* ============================================================
+   8. ARTICLE CARD COMPONENT
+   ============================================================ */
+.article-card {
+    background: var(--color-surface);
+    border: var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: box-shadow 0.2s, transform 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.article-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+/* Wrapper gambar */
+.card-img-wrap {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.card-img-wrap--sm {
+    height: 120px;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.article-card:hover .card-img {
+    transform: scale(1.03);
+}
+
+/* Label kategori — absolute di atas gambar */
+.card-category {
+    position: absolute;
+    bottom: var(--space-sm);
+    left: var(--space-sm);
+    background: var(--color-accent);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: var(--radius-sm);
+}
+
+/* Body card */
+.card-body {
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    flex: 1;
+}
+
+/* Judul artikel — 3 variasi ukuran */
+.card-title {
+    font-family: var(--font-heading);
+    line-height: 1.35;
+    color: var(--color-primary);
+}
+
+.card-title a:hover {
+    color: var(--color-accent);
+}
+
+.card-title--lg { font-size: 1.5rem; }
+.card-title--md { font-size: 1rem; }
+.card-title--sm { font-size: 1rem; }
+
+/* Excerpt/ringkasan */
+.card-excerpt {
+    font-size: 0.9rem;
+    color: var(--color-secondary);
+    line-height: 1.6;
+}
+
+.card-excerpt--sm {
+    /* Display -webkit-box untuk line clamp — cukup 2 baris di card kecil */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Meta info — tanggal, durasi baca */
+.card-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: 0.8rem;
+    color: var(--color-muted);
+    margin-top: auto; /* selalu di bagian bawah card */
+}
+
+.meta-sep {
+    color: var(--color-border);
+}
+
+
+/* ============================================================
+   9. SIDEBAR & WIDGETS
+   ============================================================ */
+aside {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    position: sticky; /* sidebar sticky saat scroll */
+    top: calc(var(--header-height) + var(--space-md));
+}
+
+/* Widget container */
+.widget {
+    background: var(--color-surface);
+    border: var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+}
+
+.widget--accent {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: white;
+}
+
+.widget-title {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: var(--space-md);
+    padding-bottom: var(--space-sm);
+    border-bottom: 2px solid var(--color-accent);
+    display: inline-block;
+}
+
+.widget--accent .widget-title {
+    border-bottom-color: rgba(255,255,255,0.3);
+}
+
+.widget-desc {
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: var(--space-md);
+    line-height: 1.6;
+}
+
+/* Trending list */
+.trending-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.trending-item {
+    display: flex;
+    gap: var(--space-md);
+    align-items: flex-start;
+}
+
+.trending-num {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-border);
+    font-family: var(--font-heading);
+    line-height: 1;
+    flex-shrink: 0;
+    width: 28px;
+}
+
+.trending-link {
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--color-primary);
+}
+
+.trending-link:hover {
+    color: var(--color-accent);
+}
+
+/* Category pills grid */
+.category-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+}
+
+.category-pill {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 5px 12px;
+    background: var(--color-bg);
+    border: var(--border);
+    border-radius: 99px;
+    color: var(--color-secondary);
+    transition: all 0.15s;
+}
+
+.category-pill:hover {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: white;
+}
+
+/* Newsletter form */
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.newsletter-input {
+    width: 100%;
+    padding: var(--space-sm) var(--space-md);
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: var(--radius-sm);
+    color: white;
+    font-size: 0.875rem;
+    outline: none;
+    transition: border-color 0.15s;
+}
+
+.newsletter-input::placeholder { color: rgba(255,255,255,0.5); }
+.newsletter-input:focus { border-color: rgba(255,255,255,0.6); }
+
+.newsletter-btn {
+    width: 100%;
+    padding: var(--space-sm);
+    background: var(--color-accent);
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.newsletter-btn:hover {
+    background: #b91c1c;
+}
+
+
+/* ============================================================
+   10. FOOTER
+   ============================================================ */
+.site-footer {
+    background: var(--color-primary);
+    color: rgba(255,255,255,0.7);
+    margin-top: var(--space-2xl);
+}
+
+.footer-inner {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-2xl);
+
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--space-2xl) var(--space-xl);
+}
+
+.footer-brand .logo {
+    color: white;
+    margin-bottom: var(--space-md);
+}
+
+.footer-tagline {
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+}
+
+.footer-heading {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: var(--space-md);
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.footer-list a {
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.6);
+    transition: color 0.15s;
+}
+
+.footer-list a:hover {
+    color: white;
+}
+
+/* Footer bottom bar */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-md);
+
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--space-md) var(--space-xl);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.8rem;
+}
+
+.footer-bottom-nav {
+    display: flex;
+    gap: var(--space-md);
+}
+
+.footer-bottom-nav a {
+    color: rgba(255,255,255,0.5);
+    transition: color 0.15s;
+}
+
+.footer-bottom-nav a:hover {
+    color: white;
+}
+
+
+/* ============================================================
+   11. RESPONSIVE — MEDIA QUERIES
+   ============================================================ */
+
+/* Tablet — layar < 1024px */
+@media (max-width: 1024px) {
+
+    /* Layout: sidebar pindah ke bawah main */
+    .page-layout {
+        grid-template-columns: 1fr;
+        padding: var(--space-lg);
+    }
+
+    aside {
+        position: static; /* sidebar tidak sticky di tablet/mobile */
+    }
+
+    /* Footer: brand di atas, links di bawah */
+    .footer-inner {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+}
+
+/* Tablet kecil — layar < 768px */
+@media (max-width: 768px) {
+
+    /* Header: sembunyikan nav tengah — di production diganti hamburger menu */
+    .header-inner {
+        grid-template-columns: 1fr auto;
+    }
+
+    nav {
+        display: none;
+    }
+
+    /* Hero grid: jadi 1 kolom */
+    .hero-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .article-featured {
+        grid-row: auto;
+    }
+
+    /* Card gambar lebih kecil */
+    .card-img-wrap { height: 160px; }
+    .card-img-wrap--sm { height: 160px; }
+
+    .card-title--lg { font-size: 1.25rem; }
+
+    /* Footer links: 2 kolom */
+    .footer-links-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile — layar < 480px */
+@media (max-width: 480px) {
+
+    :root {
+        --space-xl: 1.25rem;
+        --space-2xl: 2rem;
+    }
+
+    .page-layout {
+        padding: var(--space-md);
+    }
+
+    /* Article grid: 1 kolom penuh */
+    .article-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer links: 1 kolom */
+    .footer-links-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo-text {
+        display: none; /* di mobile sangat kecil, sembunyikan teks logo */
+    }
+}
