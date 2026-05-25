@@ -1,0 +1,402 @@
+
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="rszkaa — Junior Frontend Developer & Digital Tech Enthusiast">
+  <title>rszkaa — Digital Tech Enthusiast</title>
+  <link rel="stylesheet" href="train-style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>  
+  <header>
+    <div class="navbar" id="navbar">
+      <a href="#hero" class="nav-logo" aria-label="rszkaa - kembali ke atas">
+        <span class="logo-bracket">[</span>R<span class="logo-bracket">]</span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle"
+              aria-label="Buka menu navigasi"
+              aria-expanded="false"
+              aria-controls="nav-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav class="nav-menu" id="nav-menu" aria-label="Navigasi utama">
+        <ul class="nav-list">
+          <li><a href="#about"   class="nav-link">About</a></li>
+          <li><a href="#skills"  class="nav-link">Skills</a></li>
+          <li><a href="#contact" class="nav-link" id="contact-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-wrapper">
+      <section class="section hero-section" id="hero" aria-label="Hero">
+        <div class="container hero-inner">          
+          <div class="hero-text">
+
+            <div class="hero-badge">
+              <span class="badge-dot" aria-hidden="true"></span>
+              Available for work
+            </div>
+
+            <h1 class="hero-heading">
+              <span class="hero-hi">Halo, saya</span>
+              <span class="hero-name">Razka Faudzan<span class="accent-dot">.</span></span>
+              <span class="hero-role">
+                Seorang&nbsp;
+                <span class="typewriter-wrap">
+                  <span id="typewriter" class="typewriter" aria-label="peran profesional"></span>
+                  <span class="cursor" aria-hidden="true">|</span>
+                </span>
+              </span>
+            </h1>
+
+            <p class="hero-desc">
+              Junior developer yang antusias membangun antarmuka web
+              yang bersih, cepat, dan mudah digunakan — dari pixel
+              pertama hingga production.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#skills" class="btn btn-primary">
+                Lihat Skills
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
+                  <path d="M3 10L10 3M10 3H4.5M10 3V8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <a href="#contact" class="btn btn-ghost">Hire Me</a>
+            </div>
+
+            <div class="hero-stats">
+              <div class="stat-item">
+                <span class="stat-num">6+</span>
+                <span class="stat-label">Bulan belajar</span>
+              </div>
+              <div class="stat-divider" aria-hidden="true"></div>
+              <div class="stat-item">
+                <span class="stat-num">10+</span>
+                <span class="stat-label">Projects</span>
+              </div>
+              <div class="stat-divider" aria-hidden="true"></div>
+              <div class="stat-item">
+                <span class="stat-num">3</span>
+                <span class="stat-label">Tech stacks</span>
+              </div>
+            </div>
+
+          </div>
+          
+            <div class="hero-visual" aria-hidden="true">
+            
+            <div class="hero-illus-wrap">
+                
+                <img
+                src="myguweh.png"
+                alt="Razka Faudzan — Frontend Developer"
+                class="hero-photo"
+                >
+                
+                <div class="tech-badge badge-html" aria-hidden="true">
+                <span class="badge-icon" style="color:#e34f26">H5</span>
+                <span class="badge-text">HTML</span>
+                </div>
+
+                <div class="tech-badge badge-css" aria-hidden="true">
+                <span class="badge-icon" style="color:#264de4">C3</span>
+                <span class="badge-text">CSS</span>
+                </div>
+
+                <div class="tech-badge badge-js" aria-hidden="true">
+                <span class="badge-icon" style="color:#f7a800">JS</span>
+                <span class="badge-text">JavaScript</span>
+                </div>
+
+                <div class="tech-badge badge-react" aria-hidden="true">
+                <span class="badge-icon" style="color:#00d8ff">Re</span>
+                <span class="badge-text">React</span>
+                </div>
+
+            </div>
+            
+            <div class="hero-card">
+                <div class="card-top">
+                <div class="card-avatar">R</div>
+                <div class="card-info">
+                    <strong>Muhammad Razka Faudzan</strong>
+                    <span>Frontend Developer</span>
+                </div>
+                <div class="card-status">
+                    <span class="status-dot"></span>
+                    Online
+                </div>
+                </div>
+                <div class="card-stack">
+                <span class="stack-tag">HTML5</span>
+                <span class="stack-tag">CSS3</span>
+                <span class="stack-tag">JavaScript</span>
+                <span class="stack-tag">React</span>
+                <span class="stack-tag">Tailwind</span>
+                <span class="stack-tag">Laravel</span>
+                </div>
+                <div class="card-quote">
+                "Membangun web dari piksel pertama."
+                </div>
+            </div>
+
+            </div>
+        </div>
+        
+        <div class="scroll-indicator" aria-hidden="true">
+          <div class="scroll-line"></div>
+          <span>scroll</span>
+        </div>
+
+      </section>
+      
+      <section class="section about-section" id="about" aria-labelledby="about-heading">
+        <div class="container">
+
+          <div class="section-tag">About Me</div>
+
+          <div class="about-grid">
+            
+            <div class="about-left">
+              <h2 class="section-heading" id="about-heading">
+                Siapa saya<br>sebenarnya<span class="accent-dot">?</span>
+              </h2>
+
+              <p class="about-desc">
+                Saya seorang <strong>junior frontend developer</strong> yang sedang dalam
+                perjalanan membangun produk digital yang scalable dan maintainable.
+                Fokus utama saya adalah membuat antarmuka yang bersih, semantik,
+                dan mudah diakses oleh semua orang.
+              </p>
+              <p class="about-desc">
+                Saat ini aktif mempelajari <strong>React, Next.js, Laravel,</strong> dan
+                <strong>PostgreSQL</strong> — dengan tujuan menjadi fullstack developer
+                yang peduli terhadap kualitas kode dan pengalaman pengguna.
+              </p>
+
+              <div class="about-list">
+                <div class="about-item">
+                  <span class="item-icon" aria-hidden="true">▸</span>
+                  <span>Bogor, Jawa Barat, Indonesia</span>
+                </div>
+                <div class="about-item">
+                  <span class="item-icon" aria-hidden="true">▸</span>
+                  <span>Tersedia untuk remote &amp; on-site</span>
+                </div>
+                <div class="about-item">
+                  <span class="item-icon" aria-hidden="true">▸</span>
+                  <span>Open untuk magang &amp; freelance</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="about-right">
+              <div class="about-card">
+                <div class="about-avatar-wrap">
+                  <div class="about-avatar">R</div>
+                  <div class="about-ring" aria-hidden="true"></div>
+                </div>
+                <h3 class="about-name">Muhammad Razka Faudzan</h3>
+                <p class="about-role">Junior Frontend Developer</p>
+                <div class="about-badges">
+                  <span class="badge">🎓 Autodidact</span>
+                  <span class="badge">💻 Frontend Focus</span>
+                  <span class="badge">🚀 Fast Learner</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      
+      <section class="section skills-section" id="skills" aria-labelledby="skills-heading">
+        <div class="container">
+
+          <div class="section-tag">Tech Stack</div>
+          <h2 class="section-heading" id="skills-heading">
+            Teknologi yang<br>saya kuasai<span class="accent-dot">.</span>
+          </h2>
+
+          <div class="skills-grid">
+
+            <div class="skill-card sk-proficient">
+              <div class="sk-header">
+                <div class="sk-icon si-html">H5</div>
+                <div class="sk-meta">
+                  <h3 class="sk-name">HTML5</h3>
+                  <span class="sk-level">Proficient</span>
+                </div>
+              </div>
+              <p class="sk-desc">Semantic, Accessibility, SEO</p>
+              <div class="sk-bar-wrap" aria-label="Level 85%">
+                <div class="sk-bar"><div class="sk-fill" style="--w:85%"></div></div>
+                <span class="sk-pct">85%</span>
+              </div>
+            </div>
+
+            <div class="skill-card sk-proficient">
+              <div class="sk-header">
+                <div class="sk-icon si-css">C3</div>
+                <div class="sk-meta">
+                  <h3 class="sk-name">CSS3</h3>
+                  <span class="sk-level">Proficient</span>
+                </div>
+              </div>
+              <p class="sk-desc">Flexbox, Grid, Animation</p>
+              <div class="sk-bar-wrap" aria-label="Level 80%">
+                <div class="sk-bar"><div class="sk-fill" style="--w:80%"></div></div>
+                <span class="sk-pct">80%</span>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="sk-header">
+                <div class="sk-icon si-js">JS</div>
+                <div class="sk-meta">
+                  <h3 class="sk-name">JavaScript</h3>
+                  <span class="sk-level">Learning</span>
+                </div>
+              </div>
+              <p class="sk-desc">ES6+, DOM, Async/Await</p>
+              <div class="sk-bar-wrap" aria-label="Level 55%">
+                <div class="sk-bar"><div class="sk-fill" style="--w:55%"></div></div>
+                <span class="sk-pct">55%</span>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="sk-header">
+                <div class="sk-icon si-tw">TW</div>
+                <div class="sk-meta">
+                  <h3 class="sk-name">Tailwind CSS</h3>
+                  <span class="sk-level">Intermediate</span>
+                </div>
+              </div>
+              <p class="sk-desc">Utility-first, Responsive</p>
+              <div class="sk-bar-wrap" aria-label="Level 70%">
+                <div class="sk-bar"><div class="sk-fill" style="--w:70%"></div></div>
+                <span class="sk-pct">70%</span>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="sk-header">
+                <div class="sk-icon si-react">Re</div>
+                <div class="sk-meta">
+                  <h3 class="sk-name">React</h3>
+                  <span class="sk-level">Learning</span>
+                </div>
+              </div>
+              <p class="sk-desc">Components, Hooks, State</p>
+              <div class="sk-bar-wrap" aria-label="Level 40%">
+                <div class="sk-bar"><div class="sk-fill" style="--w:40%"></div></div>
+                <span class="sk-pct">40%</span>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="sk-header">
+                <div class="sk-icon si-laravel">Lv</div>
+                <div class="sk-meta">
+                  <h3 class="sk-name">Laravel</h3>
+                  <span class="sk-level">Learning</span>
+                </div>
+              </div>
+              <p class="sk-desc">MVC, Eloquent, REST API</p>
+              <div class="sk-bar-wrap" aria-label="Level 35%">
+                <div class="sk-bar"><div class="sk-fill" style="--w:35%"></div></div>
+                <span class="sk-pct">35%</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </div>    
+        
+    <section class="contact-section" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+
+        <div class="section-tag section-tag--light">Get In Touch</div>
+        <h2 class="section-heading section-heading--light" id="contact-heading">
+          Ada project<br>atau kesempatan<span class="accent-dot">?</span>
+        </h2>
+
+        <div class="contact-grid">
+
+          <div class="contact-left">
+            <p class="contact-desc">
+              Saya terbuka untuk kesempatan magang, freelance,
+              atau kolaborasi project. Jangan ragu untuk menghubungi saya.
+            </p>
+            <div class="contact-items">
+              <a href="mailto:rszkaa@email.com" class="contact-item">
+                <span class="ci-icon" aria-hidden="true">✉</span>
+                rszkaa@email.com
+              </a>
+              <a href="https://github.com/rszkaa" class="contact-item"
+                 target="_blank" rel="noopener noreferrer">
+                <span class="ci-icon" aria-hidden="true">⌥</span>
+                github.com/rszkaa
+              </a>
+              <a href="#" class="contact-item">
+                <span class="ci-icon" aria-hidden="true">in</span>
+                linkedin.com/in/rszkaa
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-right">
+            <div class="contact-form">
+              <div class="form-group">
+                <label for="c-name" class="form-label">Nama</label>
+                <input type="text" id="c-name" class="form-input"
+                       placeholder="Nama kamu" autocomplete="name">
+              </div>
+              <div class="form-group">
+                <label for="c-email" class="form-label">Email</label>
+                <input type="email" id="c-email" class="form-input"
+                       placeholder="email@contoh.com" autocomplete="email">
+              </div>
+              <div class="form-group">
+                <label for="c-msg" class="form-label">Pesan</label>
+                <textarea id="c-msg" class="form-input form-textarea"
+                          placeholder="Ceritakan projectmu..." rows="4"></textarea>
+              </div>
+              <button type="button" class="btn btn-primary btn-full" id="send-btn">
+                Kirim Pesan
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+  
+  <div class="bottom-bar" role="contentinfo" aria-label="Social links">
+    <a href="https://github.com/rszkaa" class="bottom-link"
+       target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="#" class="bottom-link"
+       target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="#" class="bottom-link"
+       target="_blank" rel="noopener noreferrer">Behance</a>
+  </div>
+
+  <script src="train-script.js"></script>
+</body>
+</html>
